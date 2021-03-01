@@ -1,6 +1,6 @@
 provider "aws" {
  region = "us-east-1"
- access_key = "***"
+ access_key = "***" or Profile ="***"
  secret_key = "***"
  token = "***"
 }
@@ -16,3 +16,8 @@ resource "aws_instance" "ubuntu_config" {
   Name = "terraform_instance"
  }
 }
+
+resource "aws_s3_bucket" "tf_course" {
+    bucket = "tf-course-arijeet202102"
+    acl    = "private"
+ }
